@@ -4,65 +4,74 @@
   <meta charset="UTF-8">
   <title>Top 3 Meme — Laugh and Learn</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fffbe6;
-      color: #333;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #a1c2ff, #afa1ff, #dea1ff, #ffa1f1, #ffa1c2, #ffafa1);
+    background-size: 600% 600%;
+    animation: gradientFlow 20s ease infinite;
+    color: #333;
+  }
 
-    header {
-      padding: 40px 20px 20px;
-      text-align: center;
-      background-color: #fff1b8;
-    }
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
-    }
+  header {
+    padding: 40px 20px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-bottom: 2px solid #fff;
+  }
 
-    p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+  }
 
-    .container {
-      position: relative;
-      height: 600px;
-      margin-top: 40px;
-    }
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
 
-    .square {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      background-color: #fadb14;
-      border: 2px solid #000;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: #000;
-    }
+  .container {
+    position: relative;
+    height: 600px;
+    margin-top: 40px;
+  }
 
-    .square:hover {
-      transform: scale(1.08);
-      background-color: #ffe58f;
-    }
+  .square {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #000;
+  }
 
-    /* Position 3 squares */
-    .square:nth-child(1) { top: 60px; left: 100px; }
-    .square:nth-child(2) { top: 220px; left: 350px; }
-    .square:nth-child(3) { top: 100px; left: 600px; }
-  </style>
+  .square:hover {
+    transform: scale(1.08);
+    background-color: #f0f0f0;
+  }
+
+  .square:nth-child(1) { top: 60px; left: 100px; }
+  .square:nth-child(2) { top: 220px; left: 350px; }
+  .square:nth-child(3) { top: 100px; left: 600px; }
+</style>
+
 </head>
 <body>
 
