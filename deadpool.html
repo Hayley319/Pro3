@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deadpool Meme Page</title>
+  <link rel="stylesheet" href="deadpool.css">
+</head>
+
+
+<script>
+  // Listen to scroll and change background gradient
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const body = document.body;
+
+    // Change background based on scroll position
+    const red = Math.min(255, 50 + scrollTop / 5);
+    const blue = Math.max(0, 200 - scrollTop / 3);
+    const gradient = `linear-gradient(to bottom, rgb(${red},0,0), rgb(0,0,${blue}))`;
+    
+    body.style.background = gradient;
+  });
+</script>
+<body>
+
+  <h1 class="title">🎬 Deadpool Meme Collection</h1>
+
+  <div class="grid-container">
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/MTY4wmPY/Screenshot-2025-05-01-at-11-17-36-PM.png" alt="Chill Guy" onclick="openLightbox(this.src)">
+      <p>Chill Guy</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/FKY0byJH/Screenshot-2025-05-01-at-11-19-11-PM.png" alt="No Chick-fil-A Sauce?" onclick="openLightbox(this.src)">
+      <p>NO CHICK-FIL-A SAUCE?</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/qRk4VLXk/Screenshot-2025-05-01-at-11-20-17-PM.png" alt="Two Steps Ahead" onclick="openLightbox(this.src)">
+      <p>Two Steps Ahead</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/YCMHmRZQ/Screenshot-2025-05-01-at-11-21-03-PM.png" alt="The Rizzler" onclick="openLightbox(this.src)">
+      <p>The Rizzler</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/8PWvCkgj/irony.jpg" alt="Oh The Ironing!" onclick="openLightbox(this.src)">
+      <p>Oh The Ironing!</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/k4XNV0FL/Screenshot-2025-05-01-at-11-24-20-PM.png" alt="Distracted Boyfriend" onclick="openLightbox(this.src)">
+      <p>Distracted Boyfriend</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/ydZRS73Q/Screenshot-2025-05-01-at-11-25-38-PM.png" alt="Drake" onclick="openLightbox(this.src)">
+      <p>Drake</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/sxfVCczY/Screenshot-2025-05-01-at-11-26-17-PM.png" alt="Is this a...?" onclick="openLightbox(this.src)">
+      <p>Is this a...?</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/x1D4kdk7/Screenshot-2025-05-01-at-11-27-01-PM.png" alt="This is fine..." onclick="openLightbox(this.src)">
+      <p>This is fine...</p>
+    </div>
+    <div class="meme-card">
+      <img src="https://i.postimg.cc/Kjs49VTk/Screenshot-2025-05-01-at-11-28-19-PM.png" alt="Awkward Girl" onclick="openLightbox(this.src)">
+      <p>Awkward little girl</p>
+    </div>
+  </div>
+
+  <!-- Lightbox Viewer -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = src;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+<div class="fun-buttons">
+  <a href="home.html">🏠 Home</a>
+  <a href="meme1.html">🎯 Week 1</a>
+  <a href="meme2.html">🎉 Week 2</a>
+  <a href="deadpool.html">💀 Deadpool</a>
+</div>
+
+
+</body>
+</html>
